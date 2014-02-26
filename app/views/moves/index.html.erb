@@ -1,0 +1,8 @@
+<h1> Welcome to Rock Paper Scissors! </h1>
+<h2> Select your choice below! <h2>
+
+<% @player_choice.each do |choice| %>
+	<p>
+	<%= choice.name %> -->
+	<%= link_to "Pick this one", move_path(choice.id) %>
+<% end %>

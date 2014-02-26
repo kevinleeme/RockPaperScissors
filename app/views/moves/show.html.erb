@@ -1,0 +1,10 @@
+<!-- This is the logic that determines is the computers choice is equal to win, lose, or tie -->
+<% if @computer_choice == @player_choice.win %>
+<h2> Computer chose <%= @computer_choice %>. Congrats you win! </h2>
+<% elsif @computer_choice == @player_choice.lose %>
+<h2> Sorry computer chose <%= @computer_choice %>. You lose! </h2>
+<% elsif @computer_choice == @player_choice.tie %>
+<h2> Computer chose <%= @computer_choice %>. You tied! </h2>
+<% end %>
+
+<%= link_to "Play Again?", moves_path %>
